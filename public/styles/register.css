@@ -1,0 +1,69 @@
+.title{
+    margin-top: 150px;
+}
+.title p{
+   font-size: 24px;
+   margin: 10px;
+}
+
+.tab-buttons button {
+ 
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: #f1f1f1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 auto;
+
+}
+
+
+
+
+.register-container{
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.register-container h3{
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #1F1F1F;
+}
+
+.login{
+    height: 400px;
+    margin: 0 auto;
+}
+.login a{
+    color: #0A2540;
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    text-decoration: none;
+}
+.login, .register{
+    border: 1px solid black;
+    width: 350px;
+    padding: 2rem;
+    
+}
+.login input, .register input, .register select{
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 6px;
+    margin: 10px auto;
+}
+.login label, .register label{
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+

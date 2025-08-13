@@ -1,0 +1,49 @@
+.book-delivery{
+    padding: 2rem;
+    margin: 30px auto;
+}
+.title{
+    text-align: center;
+    margin-top: 100px;
+}
+.title h2{
+    font-size: 40px;
+    color: #1F1F1F;
+    margin-bottom: 10px;
+}
+.title p{
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.form{
+    width: 500px;
+    padding: 3rem;
+    border: 1px solid black;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.form:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.form label{
+    font-size: 1.1rem;
+    color: #0A2540;
+}
+.form input, .form textarea{
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 4px;
+    margin: 10px auto;
+    text-align: left;
+}
+
+.book-img{
+    margin-top: 0;
+}

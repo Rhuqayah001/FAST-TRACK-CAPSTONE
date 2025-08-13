@@ -1,0 +1,185 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/track.css">
+    <title>Track | FastTrack</title>
+</head>
+<body>
+     <header>
+        <nav>
+            <div class="logo">
+                <h1>Fast Track</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./order.html">Order</a></li>
+                <li><a href="./track.html">Track</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <button class="btn orange-btn"><a href="./register.html">Get Started</a></button>
+        </nav>
+    </header>
+
+    <section class="title">
+        <h2>Track Your Package in Real Time</h2>
+        <p>Monitor your package live as it moves from pickup to delivery. Get real-time updates, estimated arrival time, and rider details. Stay informed every step of the way..</p>
+    </section>
+
+    <section class="track-form">
+        <h4>Your Delivery Status – Live Tracking</h4>
+        <div>
+            <form action="#">
+
+                <label for="delivery-code">Delivery Code</label><br>
+                <input id="delivery-code" type="number" required><br>
+
+                <label for="pickup-location">Pickup Location</label><br>
+                <input id="pickup-location" type="text"><br>
+
+                <label for="destination">Destination</label><br>
+                <input id="destination" type="text" required><br>
+
+                <button class="btn orange-btn">Track Now</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="live-gps">
+        <h2>Live GPS Map – Rider on the Move</h2>
+
+
+        <h2>Rider Live Tracking</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+            </tr>
+            </thead>
+            <tbody id="tracking-data">
+            <!-- Data will be injected here -->
+            </tbody>
+        </table>
+
+        
+    </section>
+
+    <section>
+        <h1>Live Delivery Tracking</h1>
+
+        <table id="tracking-table" border="1">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Customer</th>
+                <th>Location</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+  
+    </section>
+
+
+
+    <footer>
+        <div class="footer-container">
+
+            <div class="foot-item">
+                <h4>Fast Track</h4>
+                <p>2025, Fast Track, All Rights Reserved</p>
+                <div class="social-item">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="foot-item">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./order.html">Order</a></li>
+                    <li><a href="./track.html">Track</a></li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div class="foot-item">
+                <h5>Customer Support</h5>
+                <ul>
+                    <li>Help Center</li>
+                    <li>FAQs</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms & Condition</li>
+                </ul>
+            </div>
+
+            <div class="foot-item">
+                <h5>Contact</h5>
+                <ul>
+                    <li>Yaba, Lagos</li>
+                    <li>support@fasttrack.ng</li>
+                    <li>+234 234 567 8910</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+    fetch('http://127.0.0.1:5000/deliveries')
+      .then(response => response.json())
+      .then(data => {
+        const tableBody = document.querySelector('#tracking-table tbody');
+        data.forEach(delivery => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${delivery.id}</td>
+            <td>${delivery.customer}</td>
+            <td>${delivery.location}</td>
+            <td>${delivery.status}</td>
+          `;
+          tableBody.appendChild(row);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+
+
+
+    fetch('http://127.0.0.1:5000/riderLocations')
+      .then(res => res.json())
+      .then(data => {
+        const tbody = document.getElementById('tracking-data');
+        data.forEach(rider => {
+          const row = `
+            <tr>
+              <td>${rider.name}</td>
+              <td>${rider.status}</td>
+              <td>${rider.lat}</td>
+              <td>${rider.lng}</td>
+            </tr>
+          `;
+          tbody.innerHTML += row;
+        });
+      })
+      .catch(err => console.error('Error loading tracking data:', err));
+
+  </script>
+
+</body>
+</html>

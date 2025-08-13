@@ -1,0 +1,158 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/register.css">
+    <title>Register | FastTrack</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Fast Track</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./order.html">Order</a></li>
+                <li><a href="./track.html">Track</a></li>
+            </ul>
+            <button class="btn orange-btn-border"><a href="./register.html">Get Started</a></button>
+        </nav>
+    </header>
+
+    <section class="title">
+        <h2>Welcome to Fast Track</h2>
+        <p>Deliver smarter. Track faster. Your package, your way.</p>
+    </section>
+
+    <section class="register-container">
+
+        <div class="tab-button">
+            <button id="show-login" class="active btn blue-btn">Login</button>
+            <button id="show-register" class="btn orange-btn">Register</button>
+        </div>
+
+        <div id="login-form" class="login">
+            <h3>Login</h3>
+            <form action="#">
+
+                <label for="login-email">Email</label><br>
+                <input id="login-email" type="email" required><br>
+
+                <label for="login-password">Password</label><br>
+                <input id="login-password" type="password" required><br>
+
+                <button type="submit" class="btn orange-btn">Login</button><br>
+
+                <p><a href="#">forget password</a></p>
+               
+            </form>
+        </div>
+
+        <div id="register-form" class="register">
+            <h3>Register</h3>
+            <form action="#">
+
+                <label for="register-name">Name</label><br>
+                <input id="register-name" type="text" required><br>
+
+                <label for="register-email">Email</label><br>
+                <input id="register-email" type="email" required><br>
+
+                <label for="register-phone-no">Phone Number</label><br>
+                <input id="register-phone-no" type="tel" required><br>
+
+                <label for="register-password">Password</label><br>
+                <input id="register-password" type="password" required><br>
+
+                <label for="register-password">Confirm Password</label><br>
+                <input id="register-password" type="password" required><br>
+
+                <label for="account-type">Account Type</label><br>
+                <select name="" id="account-type">
+                    <option value="Customer">Customer</option>
+                    <option value="Rider">Rider</option>
+                </select><br>
+
+                <button type="submit" class="btn orange-btn">Register</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+
+            <div class="foot-item">
+                <h4>Fast Track</h4>
+                <p>2025, Fast Track, All Rights Reserved</p>
+                <div class="social-item">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="foot-item">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./order.html">Order</a></li>
+                    <li><a href="./track.html">Track</a></li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div class="foot-item">
+                <h5>Customer Support</h5>
+                <ul>
+                    <li>Help Center</li>
+                    <li>FAQs</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms & Condition</li>
+                </ul>
+            </div>
+
+            <div class="foot-item">
+                <h5>Contact</h5>
+                <ul>
+                    <li>Yaba, Lagos</li>
+                    <li>support@fasttrack.ng</li>
+                    <li>+234 234 567 8910</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const showLogin = document.getElementById("show-login");
+            const showRegister = document.getElementById("show-register");
+            const loginForm = document.getElementById("login-form");
+            const registerForm = document.getElementById("register-form");
+
+            showLogin.addEventListener("click", () => {
+            loginForm.style.display = "block";
+            registerForm.style.display = "none";
+            showLogin.classList.add("active");
+            showRegister.classList.remove("active");
+            });
+
+            showRegister.addEventListener("click", () => {
+            loginForm.style.display = "none";
+            registerForm.style.display = "block";
+            showRegister.classList.add("active");
+            showLogin.classList.remove("active");
+            });
+        })
+    </script>
+</body>
+</html>

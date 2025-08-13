@@ -1,0 +1,215 @@
+body{
+    /* text-align: center; */
+    margin: 0 auto;
+}
+
+.title{
+    max-width: 900px;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title p{
+    font-size: 24px;
+    margin-top: 30px;
+    line-height: 1.5;
+}
+
+/* Mission and Vision */
+.mission-vision{
+    padding: 3rem;
+
+}
+.mv-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    margin: 40px auto;
+}
+.mv-card{
+    border-radius: 6px;
+    border: none;
+    color: white;
+    padding: 1.5rem;
+    width: 400px;
+    height: 400px;
+    line-height: 1.6;
+}
+.mission{
+    background-color: #FF6B00;
+}
+.vision{
+    background-color: #0A2540;
+}
+.mv-card h4{
+    font-size: 2rem;
+}
+.mv-card p{
+    font-size: 1.4rem;
+    text-align: left;
+    margin-top: 30px;
+}
+
+/* Why Choose Us */
+.why-choose-us{
+    padding: 2rem;
+    text-align: center;
+    margin-top: 50px;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3rem;
+    margin: 20px auto;
+    max-width: 1100px;
+    gap: 1.5rem;
+    border: 1px solid black;
+}
+.why-card{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.why-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.icon-large {
+  font-size: 2.5rem;
+  color:#28A745;
+}
+
+/* testimonial */
+.testimonial{
+    padding: 2rem;
+    background-color: #F7F7F7;
+    margin: 0 auto;
+}
+.testimonial-container{
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    justify-content: center;
+    text-align: center;
+    max-width: 700px;
+    padding: 10px 15px;
+    margin: 20px auto; */
+    display: flex;
+    gap: 1.5rem;
+    margin: 30px auto;
+
+}
+.testimonial-card{
+    width: 350px;
+    padding: 1.5rem;
+    text-align: left;
+    border-radius: 4px;
+    background-color: #FF6B00;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonial-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.testimonial-card p{
+    line-height: 1.5;
+    font-size: 1.1rem;
+    color: #F7F7F7;
+}
+.testimonial-card .user{
+    margin-top: 20px;
+    text-align: right;
+    font-style: italic;
+    font-weight: bold;
+    color: #0A2540;
+}
+
+
+/* Contact section */
+.contact-container{
+    display: flex;
+    max-width: 1000px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+.contact-form{
+    border: 1px solid black;
+    width: 400px;
+    padding: 2rem;
+    background-color: #163453;
+}
+.contact-form input, .contact-form textarea{
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border: none;
+}
+.contact-form label{
+    font-size: 1.1rem;
+    color: #FF6B00;
+    margin-bottom: 10px;
+}
+
+.contact-info{
+    padding: 2rem;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.contact-item{
+    display: flex;
+    /* align-items: center;
+    justify-content: ; */
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #333;
+}
+.contact-item p{
+    font-size: 1.4rem;
+}
+.contact-item i, .social-item i{
+    font-size: 1.5rem;
+    margin-right: 20px;
+    color: #0A2540;
+    vertical-align: middle;
+}
+.social-item {
+    text-align: center;
+}
+
+/* about-cta */
+.about-cta{
+    background-image: url(https://res.cloudinary.com/dro9z0cu3/image/upload/v1753768926/happy-customer-2_vwzz78.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    width: 80%;
+    margin: 100px auto;
+    height: 60vh;
+    border-radius: 12px;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+.abt-cta{
+    text-align: center;
+    margin: 3rem auto;
+    color: white;
+    padding: 5rem 1rem;
+}
+.abt-cta h1{
+    font-size: 50px;
+    margin: 30px auto;
+}

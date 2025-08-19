@@ -6,8 +6,7 @@
    margin: 10px;
 }
 
-.tab-buttons button {
- 
+/* .tab-buttons button {
   flex: 1;
   padding: 12px;
   border: none;
@@ -16,19 +15,19 @@
   transition: all 0.3s ease;
   font-weight: bold;
   font-size: 16px;
-  margin: 0 auto;
+} */
 
+.tab-button{
+    max-width: 300px;
+    margin: auto;
 }
-
-
-
 
 .register-container{
     background: white;
     padding: 1rem;
     border-radius: 10px;
-    margin: 0 auto;
-    max-width: 600px;
+    margin: 50px auto;
+    max-width: 400px;
     width: 100%;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
@@ -51,10 +50,9 @@
     text-decoration: none;
 }
 .login, .register{
-    border: 1px solid black;
     width: 350px;
     padding: 2rem;
-    
+    margin: 0 auto;   
 }
 .login input, .register input, .register select{
     width: 100%;

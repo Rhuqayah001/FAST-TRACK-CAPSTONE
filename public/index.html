@@ -8,6 +8,7 @@
     <title>Fast Track</title>
 </head>
 <body>
+    <!-- Navigation Bar -->
     <header>
         <nav>
             <div class="logo">
@@ -18,17 +19,24 @@
                 <li><a href="./about.html">About</a></li>
                 <li><a href="./order.html">Order</a></li>
                 <li><a href="./track.html">Track</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+
+                <button class="btn orange-btn"><a href="./register.html">Get Started</a></button>
             </ul>
-            <button class="btn orange-btn-border"><a href="./register.html">Get Started</a></button>
+            <!-- <button class="btn orange-btn"><a href="./register.html">Get Started</a></button> -->
+
+            <button class="hamburger" id="hamburger">☰</button>
         </nav>
     </header>
+
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
             <h1>Track Your Packages, Fast & Secure!</h1>
             <p>No more lost deliveries. Know exactly where your parcel is, anytime.</p>
             <div class="cta-btn">
-                <a href="#" class="btn blue-btn">Get Started</a>
-                <a href="#" class="btn orange-btn">Track</a>
+                <a href="./register.html" class="btn blue-btn">Get Started</a>
+                <a href="./track.html" class="btn orange-btn">Track</a>
             </div>
             
         </div>
@@ -43,7 +51,6 @@
                     </div>
                     <div class="carousel-item">
                       <img src="https://res.cloudinary.com/dro9z0cu3/image/upload/v1753768926/fast-food-delivery_zkarwy.jpg" class="d-block w-100 img-fluid" alt="Safe delivery service">
-                      
                     </div>
                </div>
        </div>
@@ -108,14 +115,60 @@
     </section>
 
     <section class="how-it-works">
-        <div>
-            <div class="how-card">
-                <img src="" alt="">
-                <h4></h4>
+        <h2>How It Works</h2>
+
+        <div class="steps-diagonal">
+
+            <div class="step-card">
+                <div class="step-icon">
+                    <i class="bi bi-person"></i>
+                </div>
+                <div class="step-title">
+                    Sign up
+                </div>
             </div>
+
+            <div class="step-card">
+                <div class="step-icon">
+                    <i class="bi bi-person"></i>
+                </div>
+                <div class="step-title">
+                    Sign up
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-icon">
+                    <i class="bi bi-person"></i>
+                </div>
+                <div class="step-title">
+                    Sign up
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-icon">
+                    <i class="bi bi-person"></i>
+                </div>
+                <div class="step-title">
+                    Sign up
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-icon">
+                    <i class="bi bi-person"></i>
+                </div>
+                <div class="step-title">
+                    Sign up
+                </div>
+            </div>
+
         </div>
     </section>
 
+
+    <!-- FAQ -->
     <section class="faq">
         <h2>Frequently Asked Questions</h2>
 
@@ -153,13 +206,25 @@
     <section class="footer-cta">
         <div class="f-cta">
             <h1>Ready to experience smarter deliveries?</h1>
-            <a href="#" class="btn orange-btn">Create Account</a>
-            <a href="#" class="btn blue-btn">Login</a>
+            <a href="./register.html" class="btn orange-btn">Create Account</a>
+            <a href="./register.html" class="btn blue-btn">Login</a>
         </div>
     </section>
 
     <footer>
         <div class="footer-container">
+
+            <div class="footer-gallery">
+                <img src="../images/happy-customer-2.jpg" alt="">
+                <img src="../images/happy-customer-3.jpg" alt="">
+                <img src="../images/happy-customer-4.jpg" alt="">
+                <img src="../images/happy-customer.jpg" alt="">
+                <img src="../images/happy-customer.jpg" alt="">
+                <img src="../images/happy-customer.jpg" alt="">
+                <img src="../images/happy-customer.jpg" alt="">
+                <img src="../images/happy-customer.jpg" alt="">
+                <img src="../images/happy-customer.jpg" alt="">
+            </div>
 
             <div class="foot-item">
                 <h4>Fast Track</h4>
@@ -182,7 +247,7 @@
                     <li><a href="./about.html">About</a></li>
                     <li><a href="./order.html">Order</a></li>
                     <li><a href="./track.html">Track</a></li>
-                    <li></li>
+                    <li><a href="./contact.html">Contact</a></li>
                 </ul>
             </div>
 
@@ -208,6 +273,16 @@
     </footer>
 
     <script>
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("nav-links");
+
+            hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+            hamburger.textContent = navLinks.classList.contains("show") ? "☰" : "☰";
+        })
+
+
+
         const questions = document.querySelectorAll('.faq-question');
 
         questions.forEach((q) => {
@@ -217,7 +292,19 @@
         });
         });
 
+
+        const cardsContainer = document.querySelector('.card-container');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting){
+                    cardsContainer.classList.add('show');
+                }
+            })
+        }, { threshold: 0.3 });
+
+        observer.observe(cardsContainer);
     </script>
+    <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

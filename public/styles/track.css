@@ -11,3 +11,41 @@
     margin-top: 30px;
     line-height: 1.5;
 }
+
+.track-form h4{
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+.track{
+    margin: 20px auto;
+    width: 300px;
+    padding: 2rem;
+    border-radius: 16px;
+    background-color: #163453;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.track:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.track input{
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 6px;
+    margin: 10px auto;
+}
+.track label{
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #FF6B00;
+}
+
+/* responsive */
+@media (max-width: 768px){
+   .title p{
+        font-size: 20px;
+        margin-top: 20px;
+        line-height: 1.5;
+    } 
+}
